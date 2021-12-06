@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <DisableImplicitFSharpCoreReference>true</DisableImplicitFSharpCoreReference>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PackAsTool>true</PackAsTool>
+    <RestoreAdditionalProjectSources>
+      /Users/schorsch/Development/aardvark.blazor/bin/
+    </RestoreAdditionalProjectSources>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BlazorEnableCompression Condition="'$(Configuration)' == 'Debug'">false</BlazorEnableCompression>
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <EmccExtraLDFlags>-s MAX_WEBGL_VERSION=2</EmccExtraLDFlags>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <Import Project=".paket\Paket.Restore.targets" />
+</Project>
